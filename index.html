@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadson Oliveira | Desenvolvedor .NET & Especialista de Negócio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .code-font { font-family: 'Fira Code', monospace; }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300 antialiased">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-header bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#hero" class="code-font text-lg font-bold text-primary-600 dark:text-primary-400 hover:opacity-80 transition-opacity">
+                &lt;Jadson.Dev /&gt;
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="#about" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Sobre</a>
+                <a href="#skills" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Competências</a>
+                <a href="#experience" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Experiência</a>
+                <a href="#projects" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Projetos</a>
+                <a href="#education" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Formação</a>
+                <a href="#contact" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contato</a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <!-- Theme Toggle Button -->
+                <button id="themeToggle" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                    <i class="fa-solid fa-moon dark:hidden"></i>
+                    <i class="fa-solid fa-sun hidden dark:block"></i>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-4 space-y-3 font-medium text-sm">
+            <a href="#about" class="block py-1 hover:text-primary-600 dark:hover:text-primary-400">Sobre</a>
+            <a href="#skills" class="block py-1 hover:text-primary-600 dark:hover:text-primary-400">Competências</a>
+            <a href="#experience" class="block py-1 hover:text-primary-600 dark:hover:text-primary-400">Experiência</a>
+            <a href="#projects" class="block py-1 hover:text-primary-600 dark:hover:text-primary-400">Projetos</a>
+            <a href="#education" class="block py-1 hover:text-primary-600 dark:hover:text-primary-400">Formação</a>
+            <a href="#contact" class="block py-1 hover:text-primary-600 dark:hover:text-primary-400">Contato</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen pt-28 pb-16 flex items-center justify-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 text-center z-10">
+            <!-- Profile Avatar / Initial Circle -->
+            <div class="relative w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-8 rounded-full p-1 bg-gradient-to-tr from-primary-600 to-indigo-500 shadow-xl">
+                <div class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-white text-4xl sm:text-5xl font-extrabold tracking-wider code-font">
+                    JO
+                </div>
+            </div>
+
+            <!-- Subheading badge -->
+            <p class="code-font text-xs sm:text-sm font-semibold tracking-widest text-primary-600 dark:text-primary-400 uppercase mb-3">
+                👋 HELLO WORLD!
+            </p>
+
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
+                Jadson José de Oliveira
+            </h1>
+
+            <p class="text-base sm:text-xl font-medium text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+                Desenvolvedor <span class="text-primary-600 dark:text-primary-400 font-semibold">.NET / C#</span> &amp; <span class="text-primary-600 dark:text-primary-400 font-semibold">Especialista no Negócio</span> com 8+ anos de bagagem técnica em suporte avançado N2/N3, dados e soluções completas.
+            </p>
+
+            <!-- Quick Action Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="#contact" class="px-6 py-3 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-semibold shadow-lg shadow-primary-500/25 transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-paper-plane mr-2"></i> Entre em Contato
+                </a>
+                <a href="https://github.com/JadsonDevWork" target="_blank" class="px-6 py-3 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold transition-all">
+                    <i class="fa-brands fa-github mr-2"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/dev-jadson-oliveira" target="_blank" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all">
+                    <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="about" class="py-16 bg-white dark:bg-slate-800/50 border-y border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                <i class="fa-solid fa-user-gear text-primary-600 dark:text-primary-400"></i> Sobre Mim
+            </h2>
+            <div class="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p>
+                    Sou um profissional com mais de 8 anos de experiência em tecnologia, suporte especializado e análise de processos. Evoluí de <strong>Analista de Suporte Técnico</strong> a <strong>Especialista no Negócio</strong> na Ajinsoft, aliando forte visão de produto e atendimento à resolução de problemas complexos através de desenvolvimento de software e análise de dados.
+                </p>
+                <p>
+                    Minha missão é utilizar a tecnologia e a lógica de programação para otimizar processos operacionais, diagnosticar inconsistências de forma precisa e entregar valor real ao usuário final.
+                </p>
+                <p>
+                    Atualmente, estou focado no aprimoramento contínuo em desenvolvimento de software e arquitetura, aplicando conceitos de <strong>Domain-Driven Design (DDD)</strong>, criação de <strong>APIs RESTful</strong> e manipulação de banco de dados SQL Server/MongoDB em projetos práticos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competências Técnicas -->
+    <section id="skills" class="py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3">
+                <i class="fa-solid fa-code text-primary-600 dark:text-primary-400"></i> Conhecimentos &amp; Competências
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/40 text-primary-600 dark:text-primary-400 flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Desenvolvimento de Software</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">
+                        Lógica de programação, arquitetura de software (DDD), desenvolvimento de APIs/Aplicações Web e versionamento com Git/GitHub.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-blue-50 dark:bg-slate-700 text-blue-700 dark:text-blue-300">C#</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-purple-50 dark:bg-slate-700 text-purple-700 dark:text-purple-300">.NET Web API</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-red-50 dark:bg-slate-700 text-red-700 dark:text-red-300">Angular</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-emerald-50 dark:bg-slate-700 text-emerald-700 dark:text-emerald-300">DDD</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300">Git / GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Banco de Dados &amp; Consultas</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">
+                        Consultas, filtragens e manipulação de dados para diagnóstico avançado de sistemas e criação de relatórios operacionais.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-amber-50 dark:bg-slate-700 text-amber-700 dark:text-amber-300">Microsoft SQL Server</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-green-50 dark:bg-slate-700 text-green-700 dark:text-green-300">MongoDB</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-blue-50 dark:bg-slate-700 text-blue-700 dark:text-blue-300">Queries &amp; Procedures</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-100 dark:bg-yellow-900/40 text-yellow-600 dark:text-yellow-400 flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-chart-column"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Análise de Dados &amp; BI</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">
+                        Criação de dashboards interativos e relatórios visuais no Power BI para suporte estratégico à tomada de decisão.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-yellow-50 dark:bg-slate-700 text-yellow-700 dark:text-yellow-300">Power BI</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300">Dashboards</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-indigo-50 dark:bg-slate-700 text-indigo-700 dark:text-indigo-300">Indicadores KPIs</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-teal-100 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Gestão de Negócio &amp; CS</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">
+                        Suporte N2/N3, atendimento consultivo, retenção (Pós-venda), resolução de incidentes e interface comercial/financeira.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-teal-50 dark:bg-slate-700 text-teal-700 dark:text-teal-300">Suporte N2/N3</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-sky-50 dark:bg-slate-700 text-sky-700 dark:text-sky-300">Customer Success</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300">Pós-Venda</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiência Profissional -->
+    <section id="experience" class="py-16 bg-white dark:bg-slate-800/50 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3">
+                <i class="fa-solid fa-briefcase text-primary-600 dark:text-primary-400"></i> Experiência Profissional
+            </h2>
+
+            <div class="relative border-l-2 border-primary-500/30 pl-6 space-y-8">
+                <!-- Timeline item -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-primary-600 ring-4 ring-white dark:ring-slate-900"></div>
+                    <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+                            Especialista de Negócio | Analista de Suporte Técnico Sênior
+                        </h3>
+                        <span class="text-xs font-semibold code-font px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">
+                            Maio 2017 – Fev 2026 (8 anos 10 mos)
+                        </span>
+                    </div>
+                    <p class="text-sm font-semibold text-primary-600 dark:text-primary-400 mb-3">
+                        Ajinsoft • Barueri, SP
+                    </p>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                        Trajetória de crescimento contínuo atuando desde o suporte técnico direto ao usuário até a posição de Especialista no Negócio, unindo visão operacional, atendimento consultivo e soluções tecnológicas.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+                        <li><strong>Especialidade no Negócio e Atendimento Consultivo:</strong> Atuação como referência técnica e funcional do sistema, auxiliando clientes na utilização otimizada da plataforma e garantindo retenção e satisfação (Pós-Venda / CS).</li>
+                        <li><strong>Suporte Técnico Avançado (N2/N3):</strong> Investigação e resolução de chamados complexos, diagnósticos de causa raiz e correção de inconsistências operacionais em sistemas.</li>
+                        <li><strong>Banco de Dados e Análise:</strong> Realização de consultas e manipulação de dados em SQL Server para suporte a chamados e criação de relatórios/dashboards interativos em Power BI.</li>
+                        <li><strong>Visão Multissetorial (Comercial/Financeiro):</strong> Atuação multifuncional integrada aos processos comerciais e rotinas financeiras/administrativas, acompanhando toda a jornada do cliente.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projects" class="py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3">
+                <i class="fa-solid fa-folder-open text-primary-600 dark:text-primary-400"></i> Projetos em Destaque
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Projeto ConnectApp -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                                <i class="fa-solid fa-layer-group text-primary-600"></i> ConnectApp
+                            </h3>
+                            <span class="text-xs font-semibold code-font px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">
+                                Full-Stack
+                            </span>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                            Aplicação completa para gestão de conexões e usuários. Desenvolvida com arquitetura limpa focada em <strong>Domain-Driven Design (DDD)</strong>, API REST em C# .NET e interface reativa em Angular.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs font-mono px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-slate-700 dark:text-slate-300">C# .NET</span>
+                            <span class="text-xs font-mono px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-slate-700 dark:text-slate-300">Angular 19</span>
+                            <span class="text-xs font-mono px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-slate-700 dark:text-slate-300">DDD</span>
+                            <span class="text-xs font-mono px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-slate-700 dark:text-slate-300">SQL Server</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/JadsonDevWork/ConnectApp" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 text-slate-800 dark:text-slate-200 transition-colors">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
+
+                <!-- Card Genérico para mais Repositórios -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                                <i class="fa-solid fa-code-branch text-primary-600"></i> Projetos de Estudo &amp; APIs
+                            </h3>
+                            <span class="text-xs font-semibold code-font px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300">
+                                Repositórios
+                            </span>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                            Aplicações e estudos focados em consumo de APIs REST, modelagem de banco de dados relacionais e não-relacionais, e boas práticas de Orientação a Objetos.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs font-mono px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-slate-700 dark:text-slate-300">API REST</span>
+                            <span class="text-xs font-mono px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-slate-700 dark:text-slate-300">MongoDB</span>
+                            <span class="text-xs font-mono px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-slate-700 dark:text-slate-300">Power BI</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/JadsonDevWork?tab=repositories" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 text-slate-800 dark:text-slate-200 transition-colors">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Explorar Repositórios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formação Acadêmica -->
+    <section id="education" class="py-16 bg-white dark:bg-slate-800/50 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3">
+                <i class="fa-solid fa-graduation-cap text-primary-600 dark:text-primary-400"></i> Formação Acadêmica
+            </h2>
+
+            <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Ciência da Computação</h3>
+                    <span class="text-xs font-semibold code-font px-2.5 py-1 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">
+                        2008 – 2015
+                    </span>
+                </div>
+                <p class="text-sm font-medium text-primary-600 dark:text-primary-400">
+                    Universidade Paulista (UNIP)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-4">
+                Vamos conversar?
+            </h2>
+            <p class="text-slate-600 dark:text-slate-300 mb-8 max-w-lg mx-auto">
+                Estou disponível para novas oportunidades em Desenvolvimento de Software (.NET/C#) e Suporte Técnico N2/N3.
+            </p>
+
+            <div class="inline-flex flex-wrap items-center justify-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                <a href="mailto:jadson.dev.work@gmail.com" class="px-5 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-medium text-sm transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i> jadson.dev.work@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/dev-jadson-oliveira" target="_blank" class="px-5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-200 font-medium text-sm transition-colors flex items-center gap-2">
+                    <i class="fa-brands fa-linkedin text-blue-600"></i> LinkedIn
+                </a>
+                <a href="https://github.com/JadsonDevWork" target="_blank" class="px-5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-200 font-medium text-sm transition-colors flex items-center gap-2">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500 dark:text-slate-400">
+        <p>© 2026 Jadson José de Oliveira. Desenvolvido para GitHub Pages.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu & Dark Mode -->
+    <script>
+        // Dark Mode Logic
+        const themeToggle = document.getElementById('themeToggle');
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+    </script>
+</body>
+</html>
